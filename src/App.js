@@ -2,12 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  let Num = Math.round(Math.random()*10);
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.js</code> and save to reload. The random number is {Num}
         </p>
         <a
           className="App-link"
@@ -21,5 +24,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
