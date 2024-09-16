@@ -15,7 +15,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload. The random number is <button onClick={refresh}>{Num}</button>
+          Edit <code>src/App.js</code> and save to reload. <br></br> <button onClick={refresh}>Click here to change the number</button> <br></br> The number is {Num}
         </p>
         <a
           className="App-link"
