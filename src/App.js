@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <big>DVS Bathroom Tracker</big>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload. <br></br> <button onClick={refresh}>Click here to change the number</button> <br></br> The number is {Num}
