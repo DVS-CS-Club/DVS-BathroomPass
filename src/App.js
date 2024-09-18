@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React, { useState } from 'react';
 
@@ -14,18 +14,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <big>DVS Bathroom Tracker</big>
-        <img src={logo} className="App-logo" alt="logo" />
+        
+        <input type = "text" id = "username" name="username" placeholder='Enter Name Here'></input>
+        <button>Validate Your Pass</button>
+
         <p>
-          Edit <code>src/App.js</code> and save to reload. <br></br> <button onClick={refresh}>Click here to change the number</button> <br></br> The number is {Num}
+          <button onClick={refresh}>Click here to change the number</button> <br></br> The number is {Num}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       
       </header>
     </div>
   );
