@@ -1,31 +1,25 @@
 import { useState } from 'react';
-import './App.css'
+import Select from 'react-select';
+import './App.css';
+
+const names = [
+    { value: 'John Cena', label: 'John Cena' },
+    { value: 'Tom Brady', label: 'Tom Brady' }
+];
 
 function App() {
-  const [Num, setNum] = useState(Math.round(Math.random()*10));
-
-  
-  
-  function refresh() {
-      setNum(Math.round(Math.random()*10));
-  }  
-
-  
+  const [selectedName, setSelectedName] = useState(null);
 
   return (
     <>
       <div className="flex flex-col">
-        <div className="mb-10"><h1 className="text-200xl">DVS Bathroom Tracker</h1></div>
+        <h1 className="text-200xl mb-10">DVS Bathroom Tracker</h1>
 
-        <div className = ""><input type = "text" id = "username" name="username" placeholder='Enter Name Here'></input></div>
-
-        
+        <Select className="text-black" value={selectedName} onChange={setSelectedName} options={names} />
         <button>Validate Your Pass</button>
-        <button className="mt-14" onClick={refresh}>Click here to change the number</button>
-        <p>The number is {Num}</p>
       </div>
     </>
   )
 }
 
-export default App
+export default App;
