@@ -9,6 +9,12 @@ const names: OptionType[] = [
     { value: 'Jane Doe', label: 'Jane Doe' },
 ]
 
+
+let OutofClass: OptionType [] = 
+[]
+
+
+
 function App() {
     const [selectedName, setSelectedName] = useState<OptionType>({} as OptionType);
 
@@ -17,6 +23,10 @@ function App() {
             setSelectedName(option);
         }
     }  
+
+    function LeaveClass(){
+      OutofClass.push(selectedName);
+    }
   
   return (
     <>
@@ -24,8 +34,9 @@ function App() {
         <h1 className="text-200xl font-bold mb-10 text-gray-600">DVS Bathroom Tracker</h1>
 
         <Select className="text-black border border-black rounded mb-5" value={selectedName} onChange={handleChange} options={names} />
-        <button className="text-black bg-green-500 border border-black rounded-md">Validate Your Pass</button>
-        <p>{selectedName.value}</p>
+        <button className="text-black bg-green-500 border border-black rounded-md" onClick = {LeaveClass}>Validate Your Pass</button>
+        
+        
       </div>
     </>
   )
