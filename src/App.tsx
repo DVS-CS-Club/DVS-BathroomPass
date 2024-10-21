@@ -35,7 +35,7 @@ function App() {
 
         <Select className="text-black border border-black rounded mb-5" value={selectedName} onChange={handleChange} options={names} />
         <button className="text-black bg-green-500 border border-black rounded-md" onClick = {LeaveClass}>Validate Your Pass</button>
-        
+        {OutofClass.map((value) => <p>{value.label}</p>)}
         
       </div>
     </>
